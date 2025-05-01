@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_logo">#0F88AF</color>
+    <color name="selected_tab_color">#F7F0E4</color>
+    <color name="background_tint_color">#F1F0E8</color>
+    <color name="orange">#FA7146</color>
+    <color name="transparentWhite">#FFFFFFFF</color>
+
+    <color name="buttonTextColor">#FFFFFFFF</color>
+
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="textColor">#000000</color>
+    <color name="boxStrokeColor">#F1F0E8</color>
+    <color name="hintTextColor">#FF000000</color>
+    <color name="linkColor">#0000FF</color>
+    <color name="borderColor">#DBD8D8</color>
+    <color name="red">#AA2B1D</color>
+    <color name="green">#79B04D</color>
+
+
+    <color name="search_card_background">#FFFFFF</color> <!-- White for light theme -->
+    <color name="search_view_background">#F0F0F0</color> <!-- Light gray for SearchView -->
+    <color name="search_view_hint">#808080</color> <!-- Gray hint color -->
+
+
+</resources>

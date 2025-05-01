@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ITS Fuel Pump</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">Cancel</string>
+    <string name="vehicle_type">VehicleType</string>
+    <string name="vehicle_no">Vehicle No :</string>
+    <string name="fuel_slip_no">Fuel Slip No :</string>
+    <string name="quantity_of_fuel_request">Quantity of Fuel Request :</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="camera_button">camera_button</string>
+    <string name="capture_fuel_slip">Capture Fuel Slip</string>
+    <string name="camera_button1">camera_button1</string>
+    <string name="driver_with_vehicle">Driver With Vehicle Photo</string>
+    <string name="fuel_slip_capture">Fuel Slip And Fuel Meter Photos</string>
+    <string name="amount">amount</string>
+    <string name="view_fuel_slip">View fuel slip</string>
+    <string name="update">UPDATE</string>
+    <string name="quantity_of_fuel_disbursed">Quantity Of Fuel Disbursed</string>
+    <string name="fuel_rates">Fuel Rates</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="todo">TODO</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="fuel_quantity">Fuel Quantity</string>
+    <string name="requested_by">Requested By</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="driver_mobile">Driver Mobile</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="company_name">Company Name</string>
+</resources>

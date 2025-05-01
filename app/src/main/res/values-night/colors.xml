@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    Welcome Screen Background color-->
+    <color name="backgroundColor">#FF000000</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="hintTextColor">#FFFFFF</color>
+    <!--    Login Background Color-->
+    <color name="background_tint_color">#545451</color>
+    <color name="boxStrokeColor">#7B7979</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+
+    <color name="search_card_background">#333333</color> <!-- Dark gray for dark theme -->
+    <color name="search_view_background">#444444</color> <!-- Darker gray for SearchView -->
+    <color name="search_view_hint">#CCCCCC</color> <!-- Light gray hint color -->
+
+
+</resources>

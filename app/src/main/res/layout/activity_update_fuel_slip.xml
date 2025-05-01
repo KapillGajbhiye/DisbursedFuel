@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".view.activities.UpdateFuelSlip">
+
+    <!-- Modern Material Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_marginTop="56dp"
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+        app:elevation="8dp"/>
+
+    <!-- Scroll View for Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Vehicle Number Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicleNoContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconTint="@color/blue_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:boxStrokeColor="@color/blue_logo"
+                app:hintTextColor="@color/blue_logo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicleNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/vehicle_no"
+                    android:inputType="text"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fuel Slip Number Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fuelSlipNoContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vehicleNoContainer"
+                app:startIconTint="@color/blue_logo"
+                app:boxStrokeColor="@color/blue_logo"
+                android:layout_marginTop="16dp"
+                app:hintTextColor="@color/blue_logo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fuelSlipNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fuel_slip_no"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fuel Quantity Group -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fuelQuantityContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fuelSlipNoContainer"
+                app:startIconTint="@color/blue_logo"
+                app:boxStrokeColor="@color/blue_logo"
+                android:layout_marginTop="16dp"
+                app:hintTextColor="@color/blue_logo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fuelQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/quantity_of_fuel_request"
+                    android:inputType="numberDecimal"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColor="@color/orange"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fuel Disbursed Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fuelDisbursedContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fuelQuantityContainer"
+                app:startIconTint="@color/blue_logo"
+                app:boxStrokeColor="@color/blue_logo"
+                android:layout_marginTop="16dp"
+                app:hintTextColor="@color/blue_logo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fuelDisbursed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/quantity_of_fuel_disbursed"
+                    android:inputType="numberDecimal"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fuel Rate and Amount Row -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fuelDisbursedContainer"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fuelRatesContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/blue_logo"
+                    app:hintTextColor="@color/blue_logo"
+                    app:layout_constraintEnd_toStartOf="@id/AmountContainer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.48"
+                    app:startIconTint="@color/blue_logo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fuelRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fuel_rates"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/AmountContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/blue_logo"
+                    app:hintTextColor="@color/blue_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/fuelRatesContainer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.48"
+                    app:startIconTint="@color/blue_logo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/amount"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:inputType="numberDecimal"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Camera Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFuelSlip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rate"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/blue_logo"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fuel_slip_capture"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_logo"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/ic_camera1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/camera"
+                            android:contentDescription="@string/capture_fuel_slip"
+                            android:background="?selectableItemBackgroundBorderless"/>
+
+                        <ImageView
+                            android:id="@+id/viewImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/eye"
+                            android:contentDescription="@string/view_fuel_slip"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:visibility="gone"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Driver Capture Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cardFuelSlip"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/blue_logo"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/driver_with_vehicle"
+                        android:textSize="16sp"
+                        android:textColor="@color/blue_logo"
+                        android:textStyle="bold"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/captureDriver"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/camera"
+                            android:contentDescription="@string/capture_fuel_slip"
+                            android:background="?selectableItemBackgroundBorderless"/>
+
+                        <ImageView
+                            android:id="@+id/viewDriverImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/eye"
+                            android:contentDescription="@string/view_fuel_slip"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:visibility="gone"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Similar structure to fuel slip card -->
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Update Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/update"
+                app:iconTint="@color/white"
+                app:cornerRadius="8dp"
+                app:elevation="4dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="@color/blue_logo"
+                app:layout_constraintTop_toBottomOf="@id/cardDriver"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
