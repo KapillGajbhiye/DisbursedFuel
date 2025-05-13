@@ -497,7 +497,7 @@ class UpdateFuelSlip : AppCompatActivity() {
             amount.error = "Fuel Disbursed Quantity cannot be greater than request"
             return false
         }
-        // push
+
         return true
 
     }
