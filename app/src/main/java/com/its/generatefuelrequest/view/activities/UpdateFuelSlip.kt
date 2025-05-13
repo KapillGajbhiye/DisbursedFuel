@@ -492,14 +492,14 @@ class UpdateFuelSlip : AppCompatActivity() {
             fuelRate.error = "Invalid Fuel Rate"
             return false
         }
-//test new app
 
         if (amount.length() == 0) {
             amount.error = "Fuel Disbursed Quantity cannot be greater than request"
             return false
         }
-        // test
+
         return true
+
     }
 
 }
